@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  函数 
+        function add(a,b){
+            return a+b;
+        }
+
+        var s = add(2,4);
+        alert(s);
+
+        /* 数组 
+      /*   var arr = new Array(1,2,3,4); */
+        /* console.log(arr[0]); 
+        var arr = [1,2,3,4,5];
+        arr[10] = 50;
+        console.log(arr[5]);
+        
+        arr[6] = "a";
+        arr[7] = true;   
+        console.log(arr[6]);
+        console.log(arr[7]);     
+        console.log(arr);
+         */
+        var arr = [1,2,3,4,5]
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+            
+        }
+        /* arr.forEach(function(e){
+            alert(e)
+        }) */
+       /* 箭头函数 (...)=>(...) 简化函数定义 */
+        arr.forEach((e) => {
+            window.alert(e)
+        } )
+        /* PUSH添加元素到数组末尾 */
+        arr.push(4,5,6)
+        /* splice:删除元素(删除第几个索引,向后删除多少个元素)*/
+        arr.splice(2,2)
+
+        
+
+    </script>
+</body>
+</html>

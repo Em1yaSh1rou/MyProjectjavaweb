@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/off.gif" id="q1">
+    <input type="button" value="开启" onclick="on()">
+    <input type="button" value="关闭" onclick="off()">
+
+    <!-- onfocus onblur -->
+    <br><br>
+    <input type="text" value="ZYQWAN" id="name" onfocus="lower()" onblur="upper()">
+
+    <br><br>
+    <input type="checkbox" name="hobby">电影
+    <input type="checkbox" name="hobby">旅游
+    <input type="checkbox" name="hobby">游戏
+    
+    
+    <br><br>
+    <input type="button" value="全选" onclick="sall()">
+    <input type="button" value="反选" onclick="reverse()">
+
+    <script>
+        function on(){
+        var light = document.getElementById("q1");
+        light.src=("img/on.gif");
+    }
+        function off(){
+        var light = document.getElementById("q1");
+        light.src=("img/off.gif");
+    }
+        function lower(){//大写
+            var yuansu = document.getElementById('name')
+            yuansu.value = yuansu.value.toLowerCase();
+        }
+    
+        function upper(){//小写
+            var yuansu = document.getElementById('name')
+            yuansu.value = yuansu.value.toUpperCase();
+        }
+
+        function sall(){
+            alert("DDDs")
+            var box = document.getElementsByName('hobby');
+           
+            for (let i = 0; i < box.length; i++) {
+                const element = box[i];
+                element.checked = true;
+                
+            }
+        }
+        function reverse(){
+            var box = document.getElementsByName('hobby');
+            for (let i = 0; i < box.length; i++) {
+                const element = box[i];
+                element.checked = false;
+            }
+        }
+    </script>
+</body>
+</html>

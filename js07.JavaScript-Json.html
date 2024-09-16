@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 自定义对象 */
+        var user={
+            name:"Tom",
+            age:20,
+            gender:"male",
+            // eat:function(){
+            //     alert("休息");
+            // }
+            /* 简化函数格式 */
+            eat(){
+                alert("休息");
+            }
+        }
+        /* 调用属性 */
+        console.log(user.name);
+       
+        /* 调用函数 */
+        user.eat();
+        /* Json格式 key需要双引号包括 字符串value需要双引号 数字不喜欢要,数组需要在方括号中*/
+        var Jsons = '{"name":"jerry","age":18,"addr":["北京","上海","广州","深圳"]}'
+        /* JSON字符串转为JS对象 */
+        var jsObject = JSON.parse(Jsons)
+        alert(jsObject.name)
+        /* JS对象转为JSON字符串 */
+        alert(JSON.stringify(jsObject))
+    </script>
+
+</body>
+</html>
